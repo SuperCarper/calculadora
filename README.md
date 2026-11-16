@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int main() {
@@ -12,46 +13,43 @@ int main() {
             continue;
         }
 
-        if (option == 1) {
-            printf("\nDigite o primeiro número:");
+        if (option == 1 || option == 2 || option == 3 || option == 4) {
             double a, b;
-            scanf("%lf", &a);
-            printf("\nDigite o segundo número:");
-            scanf("%lf", &b);
-            double soma = a + b;
-            printf("Resultado: %g + %g = %g\n", a, b, soma);
-        }
-        else if (option == 2) {
-            printf("\nDigite o primeiro número:");
-            double a, b;
-            scanf("%lf", &a);
-            printf("\nDigite o segundo número:");
-            scanf("%lf", &b);
-            double sub = a - b;
-            printf("Resultado: %g - %g = %g\n", a, b, sub);
-        }
-        else if (option == 3) {
-            printf("\nDigite o primeiro número:");
-            double a, b;
-            scanf("%lf", &a);
-            printf("\nDigite o segundo número:");
-            scanf("%lf", &b);
-            double mult = a * b;
-            printf("Resultado: %g * %g = %g\n", a, b, mult);
-        }
-        else if (option == 4) {
-            printf("\nDigite o primeiro número:");
-            double a, b;
-            scanf("%lf", &a);
-            printf("\nDigite o segundo número:");
-            scanf("%lf", &b);
 
-            if (b == 0) {
-                printf("Erro: Divisão por zero não é permitida.\n");
+            printf("\nDigite o primeiro número:");
+            if (scanf("%lf", &a) != 1) {
+                printf("Entrada inválida.\n");
+                while (getchar() != '\n');
+                continue;
             }
-            else {
-                double div = a / b;
-                printf("Resultado: %g / %g = %g\n", a, b, div);
+
+            printf("\nDigite o segundo número:");
+            if (scanf("%lf", &b) != 1) {
+                printf("Entrada inválida.\n");
+                while (getchar() != '\n');
+                continue;
+            }
+
+            if (option == 1) {
+                double soma = a + b;
+                printf("Resultado: %g + %g = %g\n", a, b, soma);
+            }
+            else if (option == 2) {
+                double sub = a - b;
+                printf("Resultado: %g - %g = %g\n", a, b, sub);
+            }
+            else if (option == 3) {
+                double mult = a * b;
+                printf("Resultado: %g * %g = %g\n", a, b, mult);
+            }
+            else if (option == 4) {
+                if (b == 0) {
+                    printf("Erro: Divisão por zero não é permitida.\n");
+                }
+                else {
+                    double div = a / b;
+                    printf("Resultado: %g / %g = %g\n", a, b, div);
+                }
             }
         }
         else if (option == 5) {
