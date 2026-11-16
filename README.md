@@ -122,7 +122,7 @@ int main() {
         }
         else if (loop == 'n' || loop == 'N') {
             lista = 1;
-            printf("Obrigado por usar a calculadora! Até a próxima.");
+            printf("Obrigado por usar a calculadora! Até a próxima.\n");
         }
     }
 
