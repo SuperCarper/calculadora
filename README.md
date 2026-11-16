@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int main() {
@@ -7,8 +8,9 @@ int main() {
         printf("===============================\nCalculadora Simples\n===============================\nSelecione uma operação:\n1. Adição\n2. Subtração\n3. Multiplicação\n4. Divisão\n5. Sair\nOpção:");
 
         if (scanf("%d", &option) != 1) {
-            printf("Entrada inválida. Digite um número.\n");
-            while (getchar() != '\n');
+            printf("Entrada inválida. Digite uma opção numérica.\n");
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF);
             continue;
         }
 
@@ -18,14 +20,16 @@ int main() {
 
             if (scanf("%lf", &a) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
             printf("\nDigite o segundo número:");
             if (scanf("%lf", &b) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
@@ -38,14 +42,16 @@ int main() {
 
             if (scanf("%lf", &a) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
             printf("\nDigite o segundo número:");
             if (scanf("%lf", &b) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
@@ -58,14 +64,16 @@ int main() {
 
             if (scanf("%lf", &a) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
             printf("\nDigite o segundo número:");
             if (scanf("%lf", &b) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
@@ -78,14 +86,16 @@ int main() {
 
             if (scanf("%lf", &a) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
             printf("\nDigite o segundo número:");
             if (scanf("%lf", &b) != 1) {
                 printf("Entrada inválida.\n");
-                while (getchar() != '\n');
+                int c;
+                while ((c = getchar()) != '\n' && c != EOF);
                 continue;
             }
 
